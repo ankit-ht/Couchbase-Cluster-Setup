@@ -1,0 +1,32 @@
+# Command for adding multiple nodes
+/opt/couchbase/bin/couchbase-cli cluster-init \
+  --cluster <PRIVATE_IP_NODE1> \
+  --cluster-username Administrator \
+  --cluster-password Password123! \
+  --services data,index,query
+
+/opt/couchbase/bin/couchbase-cli server-add \
+  --cluster <PRIVATE_IP_NODE1> \
+  --username Administrator \
+  --password Password123! \
+  --server-add <PRIVATE_IP_NODE2> \
+  --server-add-username Administrator \
+  --server-add-password Password123! \
+  --services data,index,query
+
+/opt/couchbase/bin/couchbase-cli server-add \
+  --cluster <PRIVATE_IP_NODE1> \
+  --username Administrator \
+  --password Password123! \
+  --server-add <PRIVATE_IP_NODE3> \
+  --server-add-username Administrator \
+  --server-add-password Password123! \
+  --services data,index,query
+
+# Rebalance th cluster
+/opt/couchbase/bin/couchbase-cli rebalance \
+  --cluster <PRIVATE_IP_NODE1> \
+  --username Administrator \
+  --password Password123!
+
+
