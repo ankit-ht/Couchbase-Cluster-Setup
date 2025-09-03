@@ -1,9 +1,6 @@
 ---
 couchbase_version: "7.3.1"
 
-couchbase_admin_user: "Administrator"
-couchbase_admin_password: "Password123!"
-
 couchbase_cluster_name: "MyCluster"
 couchbase_bucket: "default"
 

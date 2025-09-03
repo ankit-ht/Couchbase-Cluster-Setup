@@ -29,4 +29,8 @@
   --username Administrator \
   --password Password123!
 
+ansible-playbook playbooks/main.yml --ask-vault-pass
+
+ansible-vault decrypt secrets.yml --ask-vault-pass
+
 
